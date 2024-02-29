@@ -1,0 +1,24 @@
+// something very basic. This is my own store
+CREATE TABLE RETROLIFE (id INTEGER PRIMARY KEY, Item TEXT, Price INTEGER, Quantity INTEGER, Size TEXT);
+
+INSERT INTO RETROLIFE VALUES (1, "T-shirts", 5, 8, "S,M,L,XL" );
+INSERT INTO RETROLIFE VALUES (2, "Shoes",30, 4, "Ask counter");
+INSERT INTO RETROLIFE VALUES (3, "Jeans",25, 10, "Ask counter");
+INSERT INTO RETROLIFE VALUES (4, "Jackets",12, 5, "S,M,L,XL");
+INSERT INTO RETROLIFE VALUES (5, "Hats",8, 10,"One Size");
+INSERT INTO RETROLIFE VALUES (6, "Tank Tops", 5, 8, "One Size" );
+INSERT INTO RETROLIFE VALUES (7, "Slippers",20, 4, "Ask counter");
+INSERT INTO RETROLIFE VALUES (8, "Leggings",15, 10, "One Size");
+INSERT INTO RETROLIFE VALUES (9, "Sunglasses",10, 5, "Ask counter");
+INSERT INTO RETROLIFE VALUES (10, "Boots",40, 10,"One Size");
+INSERT INTO RETROLIFE VALUES (11, "Coat", 35, 8, "One Size" );
+INSERT INTO RETROLIFE VALUES (12, "Heels",30, 4, "Seven");
+INSERT INTO RETROLIFE VALUES (13, "Shorts",25, 10, "One Size");
+INSERT INTO RETROLIFE VALUES (14, "turtle necks",12, 5, "S,M,L");
+INSERT INTO RETROLIFE VALUES (15, "Socks",8, 10,"One Size");
+
+SELECT * FROM RETROLIFE ORDER BY Price;
+
+SELECT * FROM RETROLIFE WHERE Quantity > 5 ORDER BY Item;
+
+SELECT SUM(Quantity) FROM RETROLIFE;
