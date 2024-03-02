@@ -1,4 +1,4 @@
-var xPos = 100;
+/*var xPos = 100;
 var yPos = 144;
 var xPos1 = 50;
 var yPos1 = 50;
@@ -13,5 +13,34 @@ draw = function() {
     ellipse(xPos1, yPos1, 10, 10);
     xPos1+=1;
     yPos1+=1;
-};
+};*/
 
+// Updated version 
+noStroke();
+var xPos = 50;
+var yPos = 50;
+var starSize = 10;
+
+draw = function() {
+    background(15, 15, 15);
+    fill(255, 242, 0);
+    ellipse(xPos, yPos, starSize, starSize);
+    xPos+=5;
+    yPos+=5;
+    
+    // the earth in the corner
+    fill(60, 68, 158);
+    ellipse(0, 400, 100, 100);
+    
+    // moon
+    fill(112, 102, 102);
+    ellipse(400, 100, 200, 200);
+    
+// I tried making the water and the land    
+/*fill(15, 158, 32);
+    ellipse(-5, 360, 20, 20);
+    fill(15, 158, 32);
+    rect(4, 355, 10, 10);*/
+    
+    starSize = starSize + 1;
+};
