@@ -1,0 +1,26 @@
+background(189, 188, 166);
+fill(255, 0, 0);
+textSize(56);
+text("Look!", 120, 55);
+textSize(15);
+
+text("Learn how to code for a good price", 20, 325);
+
+// bottom right label
+fill(255, 247, 0);
+rect(296, 361, 103, 52);
+fill(41, 19, 19);
+textSize(25);
+text("Buy!", 331, 385);
+fill(85, 0, 255);
+textSize(10);
+text("Price vary", 307, 397);
+
+// Price Tag
+noFill();
+bezier(288, 128, 307, 197, 131, 142, 213, 191);
+fill(245, 224, 37);
+rect(260, 121, 113, 58);
+fill(0, 0, 0);
+textSize(40);
+text("0.99", 270, 136, 148, 89);
