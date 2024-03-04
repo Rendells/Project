@@ -1,0 +1,57 @@
+// Water
+background(89, 216, 255);
+
+// sand
+fill(244, 196, 156);
+noStroke();
+rect(0, 360, 400, 40);
+
+//rock
+noStroke();
+fill(181, 170, 170);
+arc(150, 360, 75, 50, 180, 360);
+    
+var centerX = 0;
+var centerY = 0;
+var bodyLength = 0;
+var bodyHeight = 0;
+var bodyColor = color(162, 0, 255);
+var tailwidth = 0;
+var tailHeight = 0;
+var eyeSize = 0;
+var eyeColor = color(255, 0, 0);
+
+// seaweed
+strokeWeight(10);
+stroke(16, 105, 12);
+line(25, 375, 25, 25);
+line(25, 45, 50, 15);
+line(25, 150, 75, 65);
+line(25, 250, 0, 105);
+
+
+
+var drawFish = function(centerX, centerY, bodyLength, bodyHeight, tailWidth, tailHeight, eyeSize, eyeColor, bodyColor){
+noStroke();
+fill(bodyColor);
+// body
+ellipse(centerX, centerY, bodyLength, bodyHeight);
+// tail
+/*var tailWidth = bodyLength/4;
+var tailHeight = bodyHeight/2;*/
+
+triangle(centerX-bodyLength/2, centerY,
+         centerX-bodyLength/2-tailWidth, centerY-tailHeight,
+         centerX-bodyLength/2-tailWidth, centerY+tailHeight);
+// eye
+fill(eyeColor);
+ellipse(centerX+bodyLength/4, centerY, bodyHeight/5, bodyHeight/5);
+
+};
+
+drawFish(100, 50, 75, 35, 45, 25, 5, color(166, 28, 166), color(52, 44, 158));
+drawFish(300, 300, 100, 75, 45, 50, 15, color(27, 153, 8), color(10, 74, 9));
+drawFish(200, 150, 25, 15, 15, 3, color(105, 94, 94), color(255, 0, 0));
+drawFish(386, 150, 25, 15, 15, 3, color(105, 94, 94), color(255, 0, 0));
+drawFish(282, 22, 25, 15, 15, 3, color(105, 94, 94), color(255, 0, 0));
+drawFish(60, 341, 25, 15, 15, 3, color(105, 94, 94), color(255, 0, 0));
