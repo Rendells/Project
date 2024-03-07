@@ -1,0 +1,45 @@
+import tkinter
+import os
+from tkinter import *
+from tkinter.messagebox import *
+from tkinter.filledialog import *
+class Notepad:
+  __root = Tk()
+  __thisWidth = 300
+  __thisHeight = 300
+  __thisTextArea = Text(__root)
+  __thisMenuBar = Menu(__root)
+  __thisFileMenu = Menu(__thisMenuBAr, tearoff=0)
+  __thisEditMenu = Menu(__thisMenuBAr, tearoff=0)
+  __thisHelpMenu = Menu(__thisMenuBAr, tearoff=0)
+
+# To add scrollbar
+__thisScrollBar = scrollbar(__thisTextArea)
+__file = None
+def __init__(self, **kwargs):
+# Set icon
+try:
+  self.__root.wm_iconbitmap("Notepad.ico")
+expect:
+pass
+# Set windo size (the defualt is 300x300)
+try:
+  self.__thisWidth = kwargs['width']
+expect KeyError:
+pass
+try:
+  self.__thisHeight = kwargs['height']
+expect KeyError:
+pass
+#Set the window text
+self.__root.title("Untitle - Notepad")
+# center the window
+scrennWidth = self.__root.winfo.screenwidth()
+screenHeight = self.__root.winfo.screenheight()
+# for left-align
+left = (screenWidth / 2) - (self.__thisWidth /2)
+#for right-align
+top = (screenHeight / 2) - (self.__thisHeight / 2)
+#for top and bottom
+self.__root.geometry('%dx%d+%d+%d % (self.__thisWidth, self.__thisHeight, left, top))
+# to make the texarea auto resizable
