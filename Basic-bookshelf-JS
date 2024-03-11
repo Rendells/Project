@@ -1,11 +1,20 @@
+// background
+background(97, 56, 12);
+
 var book = {
     title: "I Know Why the Caged Bird Sings",
     stars: 4
 };
 
+
 // draw shelf
 fill(173, 117, 33);
 rect(0, 120, width, 10);
+
+// Second shelf
+fill(173, 117, 33);
+rect(0, 300, width, 10);
+
 
 // draw one book
 fill(214, 255, 219);
@@ -15,3 +24,143 @@ text(book.title, 15, 29, 70, 100);
 for (var i = 0; i < book.stars; i++) {
     image(getImage("cute/Star"), 13 + i * 20, 90, 20, 30);
 }
+
+
+/* var shelfx=0;
+var shelfy=124;
+
+
+//image(ohnoes,17,172,34,34);
+//image(squid,134,317,28,28);
+
+fill(133, 95, 39);
+rect(10, 10, 335, 380);
+//book data
+var book = [
+   {    title: "Smiling Face!",
+        author: "Winston",
+        stars: 5,
+        art:getImage("creatures/Winston"),
+        artx:41,
+        arty:48,
+        artsize:40,
+   },
+   {    title: "  Fear Me!",
+        author: "Enemy Bug",
+        stars: 3,
+        art:getImage("cute/EnemyBug"),
+        artx:136,
+        arty:31,
+        artsize:62},
+        
+    {   title: "Everything's      Cool!",
+        author: "     Hopper",
+        stars: 2,
+        art:getImage("creatures/Hopper-Cool"),
+        artx:263,
+        arty:53,
+        artsize:37},
+        
+    {   title: "   Afraid!",
+        author: "Old Spice Man",
+        stars: 6,
+        art:getImage("avatars/old-spice-man"),
+        artx:38,
+        arty:171,
+        artsize:47},
+        
+    {   title: "Smell this!",
+        author: "Mr Pink?",
+        stars: 3,
+        art:getImage("avatars/mr-pink"),
+        artx:153,
+        arty:171,
+        artsize:47},
+        
+    {   title: "   He got 6          stars?",
+        author: "SpunkyJealous",
+        stars: 5,
+        art:getImage("avatars/spunky-sam"),
+        artx:259,
+        arty:179,
+        artsize:39},
+        
+    {   title: "  Lost my Trousers!",
+        author: "    Mr Pants",
+        stars: 4,
+        art:getImage("avatars/mr-pants"),
+        artx:35,
+        arty:309,
+        artsize:40},
+        
+    {   title: "I can count    this high!",
+        author: "  OJ Squid",
+        stars: 2,
+        art:getImage("avatars/orange-juice-squid"),
+        artx:146,
+        arty:312,
+        artsize:40},
+        
+    {title: "   WHY!",
+    author: "Anonymyous",
+    stars: 1,
+    art:getImage("avatars/questionmark"),
+    artx:253,
+    arty:295,
+    artsize:53},
+    ];
+    
+
+
+  // draw shelf
+var shelf = function() {
+    fill(173, 117, 33);
+    rect(shelfx, shelfy, shelfx+335, 10);
+    quad(shelfx, shelfy, shelfx+10, shelfy-10, shelfx+345, shelfy-10, shelfx+335, shelfy);
+    quad(shelfx+345, shelfy-10, shelfx+345, shelfy, shelfx+335, shelfy+10, shelfx+335, shelfy);
+    };
+
+shelf();
+
+//start of books
+for (var i = 0; i < book.length; i=i+1) {
+
+    //random colors
+    var r = random(0,255);
+    var g = random(0,255);
+    var b = random(0,255);
+    
+    //book color
+    fill(r,g,b);
+    line(shelfx+15,shelfy-110,shelfx+10,shelfy-104);// top 3d angle
+    rect(shelfx+15,shelfy-110,90,100);//back cover
+    
+    //pages
+    fill(250, 245, 245);
+    rect(shelfx+15,shelfy-108,88,97);
+    
+    //front cover
+    stroke(1);
+    fill(r,g,b);
+    rect(shelfx+10,shelfy-104,90,100);
+    
+    
+    fill(0);            //    text
+    textSize(11);
+    text(book[i].title, shelfx+26, shelfy-95, 67, 100);
+    textSize(9);
+    text(book[i].author,shelfx+28,shelfy-33,70,130);
+    image(book[i].art,book[i].artx,book[i].arty,book[i].artsize,book[i].artsize);
+    for (var h = 0; h < book.stars; h++) {
+        image(getImage("cute/Star"), 13 + h * 20, 90, 20, 30);}
+        
+        for (var j = 0; j < book[i].stars; j++) {
+        image(getImage("cute/Star"), shelfx+24+(j*12),shelfy-24,13,20);
+    }
+    shelfx=shelfx+108;
+    if (shelfx >= 279) {
+        shelfx = 0;
+        shelfy = shelfy + 130;
+        shelf(shelfy); //new shelf
+    }
+} */
